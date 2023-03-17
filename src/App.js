@@ -8,6 +8,7 @@ import Addlocation from "./Pages/addlocation/addlocation";
 import Adddevice from "./Pages/adddevice/adddevice"
 
 import './App.css';
+import SearchLocation from "./Pages/searchlocation/searchLocation";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Addlocation/>}/>
           <Route path="/adddevice" element={<Adddevice/>}/>
+          <Route path="/searchLocation" element ={<SearchLocation/>}/>
 
 
 
