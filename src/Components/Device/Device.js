@@ -9,8 +9,11 @@ import React from 'react'
 
 const Device = (props) => {
   return (
+    <div><h2>Devices</h2>
     <div className="fp">
+        
          <div className="fpItem" >
+         
         <img src={tent}  alt="" className="fpImg"/>
         <div className="fpdetail">
         <span className="fpname">device name :</span><br/>
@@ -19,7 +22,7 @@ const Device = (props) => {
         
         <span className="fpstatus">Status</span></div>
       
-        
+        </div>
       </div>
     </div>
   )

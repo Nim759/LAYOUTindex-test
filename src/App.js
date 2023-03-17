@@ -17,11 +17,11 @@ function App() {
     <div className="App">
      <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Addlocation/>}/>
+          <Route path="/addlocation" element={<Addlocation/>}/>
           <Route path="/adddevice" element={<Adddevice/>}/>
           <Route path="/searchLocation" element ={<SearchLocation/>}/>
           <Route path="/searchLocation/:id" element = {<LocationId/>}/>
-          <Route path="/Home" element = {<Home/>}/>
+          <Route path="/" element = {<Home/>}/>
 
 
 

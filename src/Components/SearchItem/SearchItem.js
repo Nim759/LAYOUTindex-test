@@ -8,7 +8,7 @@ const SearchItem = (props) => {
       <div className="sItemDiscription">
         <h3  className="sItemTitle">Location name</h3 >
         
-      <button className="sItemButton"><b>View</b></button>
+     <button className="sItemButton"><b>View</b></button>
       </div>
     </div>
   )

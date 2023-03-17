@@ -1,5 +1,5 @@
 import "./LocationId.css";
-import { useLocation } from "react-router-dom";
+import { useLocation ,Link } from "react-router-dom";
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
@@ -15,23 +15,24 @@ const LocationId = () => {
     <div className="idcontainer">
         <div className="idWrapper">
           <h1 className="idTitle">Location name</h1>
-            <FontAwesomeIcon icon={faLocationDot}/>
+          
 
           <hr />
           <div className="idDetails">
-            <h1>Address</h1>
+            <h2>Address</h2>
+            <FontAwesomeIcon icon={faLocationDot}/>
             <p>Address</p>
           </div>
           <hr />
           <div className="idDetails">
-            <h1>Phone number</h1>
+            <h2>Phone number</h2>
             <p>number </p>
           </div>
           <hr />
           <div className="deviceDetails">
-            <h1>Devices</h1>
+            
             <Device/>
-            <button >Back</button>
+            <Link to = "/adddevice"><button className="add" >Add devices</button></Link>
           </div>
           
           <hr />

@@ -10,7 +10,7 @@ const Home = () => {
             <h1 style={{textAlign:"center"}}>Hello User Getting start with </h1>
            
             <div className="buttons1">
-            <Link to="/"><button className="navButton1">add location</button></Link>
+            <Link to="/addlocation"><button className="navButton1">add location</button></Link>
             <Link to="/searchlocation"> <button className="navButton1">search location</button></Link>
             </div>
         </div>
