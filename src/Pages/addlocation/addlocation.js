@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import FormInput from '../../Components/Forminput/FormInput';
+import "./addlocation.css"
 
 const Addlocation = () => {
 
@@ -76,7 +77,7 @@ const handleSubmit = async(e) => {
 };
   
   return (
-    <div className='container'>
+    <div className="container">
       <form className= "locationform">
         <h1>ADD LOACTION</h1>
         {inputs.map((input)=>(
