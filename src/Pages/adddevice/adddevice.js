@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import FormInput from '../../Components/Forminput/FormInput';
 import DragDrop from '../../Components/DragDrop/dragPhoto';
+import NavBar from '../../Components/Navbar/NavBar';
 import "./adddevice.css"
 
 const Adddevice = () => {
@@ -53,7 +54,9 @@ const handleSubmit = async(e) => {
 };
   
   return (
-    <div className='containerdevice'>
+    
+    <div > <NavBar/>
+      <div className='containerdevice'>
       <form className= "deviceform">
         <h1>ADD DEVICE</h1>
         {inputs.map((input)=>(
@@ -85,6 +88,7 @@ const handleSubmit = async(e) => {
         <button className='next'onClick={handleSubmit}>SUBMIT</button>
 
       </form>
+    </div>
     </div>
   )
 }

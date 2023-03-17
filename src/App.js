@@ -4,11 +4,13 @@ import {
   Route,
 } from "react-router-dom";
 
-import Addlocation from "./Pages/addlocation/addlocation";
-import Adddevice from "./Pages/adddevice/adddevice"
-
 import './App.css';
+
+import Addlocation from "./Pages/addlocation/addlocation";
+import Adddevice from "./Pages/adddevice/adddevice";
+import LocationId from "./Pages/locationid/LocationId";
 import SearchLocation from "./Pages/searchlocation/searchLocation";
+import Home from "./Pages/Home/Home";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
           <Route path="/" element={<Addlocation/>}/>
           <Route path="/adddevice" element={<Adddevice/>}/>
           <Route path="/searchLocation" element ={<SearchLocation/>}/>
+          <Route path="/searchLocation/:id" element = {<LocationId/>}/>
+          <Route path="/Home" element = {<Home/>}/>
 
 
 

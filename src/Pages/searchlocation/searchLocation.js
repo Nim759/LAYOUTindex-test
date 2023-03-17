@@ -2,6 +2,7 @@ import "./searchLocation.css"
 import SearchItem from "../../Components/SearchItem/SearchItem";
 import {useState} from 'react';
 import {useLocation} from "react-router-dom"
+import NavBar from "../../Components/Navbar/NavBar";
 
 const SearchLocation = () => {
 
@@ -9,6 +10,7 @@ const SearchLocation = () => {
     const [destination, setDestination] = useState(location.state)
 
   return (
+    <div><NavBar/>
     <div className="containersearch">
         <div className="search">
         <div className="listSearch">
@@ -32,7 +34,7 @@ const SearchLocation = () => {
               <SearchItem/>
           
             
-            
+              </div>  
           </div>
         </div>
         </div>
