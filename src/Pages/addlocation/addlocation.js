@@ -2,13 +2,14 @@ import React from 'react'
 import { useState } from 'react';
 import FormInput from '../../Components/Forminput/FormInput';
 import NavBar from '../../Components/Navbar/NavBar';
+import { useNavigate } from 'react-router-dom';
 import "./addlocation.css"
 
 const Addlocation = () => {
-
+  const navigate = useNavigate();
   const [values, setValues] = useState({
     name: "",
-    Address:"",
+    address:"",
     phone:"",
    
    
@@ -24,7 +25,8 @@ const inputs =[
         "Provide a location name",
       label: "Location Name",
       required: true,
-      unique: true,
+      unique: true
+     
  },
 
  
@@ -42,11 +44,11 @@ const inputs =[
  {
       id: 3,
       name: "phone",
-      type: "phone",
+      type: "text",
       placeholder: "Phone Number",
       errorMessage: "Provide valid Phone number!",
       label: "Phone Number",
-      pattern:"^{10}$"
+      
     
  }
  
@@ -74,13 +76,35 @@ const handleSubmit = async(e) => {
     phone
     } = values
 
+    const res = await fetch("http://localhost:7000/v1/location",{
+      method:"POST",
+      headers:{"Content-Type":"application/json"
+    },
+
+    body:JSON.stringify({
+      name,
+      address,
+      phone
+    })
+
+
+    })
+
+    const data = await res.json()
+
+    if(data.status === 422 || !data){
+      console.log("invalid registration");
+    }else{
+      navigate('/',{replace:true});
+      window.location.reload();
+    }
   
 };
   
   return (
     <div ><NavBar/>
       <div className="container">
-      <form className= "locationform">
+      <form method = "POST" className= "locationform">
         <h1>ADD LOACTION</h1>
         {inputs.map((input)=>(
           <FormInput

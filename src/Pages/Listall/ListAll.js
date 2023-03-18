@@ -1,26 +1,17 @@
-import "./searchLocation.css"
+import "./listall.css"
 import SearchItem from "../../Components/SearchItem/SearchItem";
-import {useState} from 'react';
-import {useLocation} from "react-router-dom"
 import NavBar from "../../Components/Navbar/NavBar";
 import useFetch from "../../Components/Hooks/useFetch";
 
-const SearchLocation = () => {
+const ListAll = () => {
 
-    const location = useLocation();
-    const [destination, setDestination] = useState(location.state)
+  const {data,loading} = useFetch("http://localhost:7000/v1/locations")
 
-    const handleClick = () => {
-      reFetch()
-    }
-
-   
-    const {data, loading, reFetch} = useFetch(`http://localhost:7000/v1/locations?name=${destination}`)
-
+    
   return (
     <div><NavBar/>
     <div className="containersearch">
-        <div className="search">
+        {/* <div className="search">
         <div className="listSearch">
             <h2 className="lsTitle">Search</h2>
             <div className="lsItem">
@@ -32,26 +23,26 @@ const SearchLocation = () => {
               />
             </div>
             <div>
-              <button  className="sbtn" onClick ={handleClick} ><b>Search</b></button>
+              <button  className="sbtn" ><b>Search</b></button>
             </div>
             
 
-          </div>
+          </div> */}
           <div className="listResult">
-              {loading ? "Loading" : <>
-              {data.map(item=>(
-                   <SearchItem item={item} key={item._id}/>
-              ))}</>}
-             
-          
+            {loading ? "Loading" : <>
+            {data.map(item=>(
+                <SearchItem item={item} key={item._id}/>
+            ))}
+              
+              </>}
             
               </div>  
           </div>
         </div>
-        </div>
+        
 
     
   )
 }
 
-export default SearchLocation
+export default ListAll

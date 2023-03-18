@@ -11,7 +11,7 @@ const Home = () => {
            
             <div className="buttons1">
             <Link to="/addlocation"><button className="navButton1">add location</button></Link>
-            <Link to="/searchlocation"> <button className="navButton1">search location</button></Link>
+            <Link to="/ListAll"> <button className="navButton1">search location</button></Link>
             </div>
         </div>
     </div>

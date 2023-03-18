@@ -11,6 +11,7 @@ import Adddevice from "./Pages/adddevice/adddevice";
 import LocationId from "./Pages/locationid/LocationId";
 import SearchLocation from "./Pages/searchlocation/searchLocation";
 import Home from "./Pages/Home/Home";
+import ListAll from "./Pages/Listall/ListAll";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/searchLocation" element ={<SearchLocation/>}/>
           <Route path="/searchLocation/:id" element = {<LocationId/>}/>
           <Route path="/" element = {<Home/>}/>
+          <Route path="/ListAll" element = {<ListAll/>}/>
 
 
 
