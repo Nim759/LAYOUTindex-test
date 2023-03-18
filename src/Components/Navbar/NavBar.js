@@ -7,7 +7,7 @@ const NavBar = () => {
     <div className="navcontainer">
         <div className="navbtn">
         <Link to = "/addlocation"><button className="navbutton">Add location</button></Link>
-        <Link to = "/searchlocation"><button className="navbutton">Search location</button></Link>
+        <Link to = "/ListAll"><button className="navbutton">Search location</button></Link>
         
 </div>
     </div>

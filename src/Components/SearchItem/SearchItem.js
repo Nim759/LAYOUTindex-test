@@ -9,7 +9,7 @@ const SearchItem = ({item}) => {
         <h2  className="sItemTitle">{item.address}</h2 >
         <h2  className="sItemTitle">{item.phone}</h2 >
         
-     <Link to = {`/searchLocation/${item._id}`}></Link><button className="sItemButton"><b>View</b></button>
+     <Link to = {`/listall/${item._id}`}><button className="sItemButton"><b>View</b></button></Link>
       </div>
     </div>
   )
